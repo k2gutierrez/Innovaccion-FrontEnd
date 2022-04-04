@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./styles.css">
+        <title>Pokedex</title>
+    </head>
+    <body>
+
+        <section class="container">
+            <div class="red1 ba"></div>
+            <div class="red2 ba">
+                <div class="blu">
+                    <div id="hp" name="hp" class="fo"></div>
+                    <div id="atk" name="atk" class="fo"></div>
+                    <div id="def" name="def" class="fo"></div>
+                    <div id="satk" name="satk" class="fo"></div>
+                    <div id="sdef" name="sdef" class="fo"></div>
+                    <div id="spd" name="spd" class="fo"></div>
+                    <div id="type" name="type" class="fo"></div>
+                    <div id="ab1" name="ab1" class="fo"></div>
+                    <div id="ab2" name="ab2" class="fo"></div>
+                </div>
+            </div>
+            <div class="c1 circ"></div>
+            <div class="c2 circ"></div>
+            <div class="c3 circ"></div>
+            <div class="c4 circ"></div>
+            <div class="sq1"></div>
+            <div class="sq2">
+                <img src="./assets/pokeball.png" alt="Pokemon" id="pokeImg" width="220 px"><br>
+            </div>
+            <div class="sq3">
+                <input type="text" placeholder="pikachu" id="pokeName" name="pokename">
+            </div>
+            <h1 id="ti">Pokedex</h1>
+            <button onclick="fetchPokemon()" id="but">Cambiar pokemon</button>
+        </section>
+        
+    </body>
+    <footer>
+        <script src="./pokedex.js"></script>
+    </footer>
+</html>

@@ -1,0 +1,252 @@
+.container{
+    margin-bottom: 0px;
+    padding: 0;
+    width: 100%;
+    height: 110px;
+    position: relative;
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 50%, rgba(73,73,208,0) 50%, rgba(0,212,255,0.23991603477328427) 50%); 
+}
+
+#n1 h3{
+    color: blue;
+    font-size: 30px;
+    width: 150px;
+    height: 30px;
+    position: absolute;
+    top: 0%;
+    left: 2%;
+}
+
+#n2{
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 35%;
+    right: 12%;
+}
+
+.n3{
+    padding: 10px 10px;
+    font-size: 20px;
+    position: absolute;
+    right: 5%;
+    top: 32%;
+    background-color: blue;
+    color: white;
+    border-radius: 5px;
+    border: none;
+}
+a{
+    color:dimgrey;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 26px;
+    text-decoration: none;
+    padding-right: 1%;
+    margin-left: 12px;
+    margin-right: 14px;
+}
+
+.container2{
+    margin-top: -10px;
+    padding: 0;
+    width: 100%;
+    height: 900px;
+    position: relative;
+}
+
+#rightSquare{
+    width: 50%;
+    height: 900px;
+    position: absolute;
+    background:blue;
+    right: 0%;
+}
+
+#leftSquare{
+    width: 50%;
+    height: 900px;
+    position: absolute;
+}
+
+h1{
+    font-size: 65px;
+    font-weight: 1000;
+    color:rgb(18, 45, 95);
+}
+
+#callAction{
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width:70%;
+    height:300px;
+}
+
+#png1{
+    width: 600px;
+    position: absolute;
+    left: 18%;
+    bottom: 0%;
+}
+
+#det{
+    position: absolute;
+    top: 45%;
+    left: 10%;
+    width: 500px;
+    height: 120px;
+}
+
+#textgeneral{
+    font-size: 25px;
+    color: dimgrey;
+}
+
+#testo{
+    width: 500px;
+    position: absolute;
+    top: 65%;
+    left: 10%;
+}
+
+#square1{
+    background-color: white;
+    opacity: 90%;
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+    width: 1200px;
+    height: 150px;
+    border-radius: 5px;
+    -webkit-box-shadow: 5px 5px 15px -4px #000000; 
+    box-shadow: 5px 5px 15px -4px #000000;
+}
+
+#square11{
+    position: absolute;
+    width: 900px;
+    top: 20%;
+    left: 12%;
+}
+#aa{
+    font-size: 30px;
+    margin-right: 150px;
+}
+#square12{
+    width: 750px;
+    position: absolute;
+    top: 50%;
+    left:10%;
+}
+#ab{
+    font-size: 40px;
+    color: darkblue;
+}
+
+.container3{
+    height: 300px;
+    width: 100%;
+    position: relative;
+}
+
+#marcas{
+    width: 90%;
+    height: 90%;
+    position: absolute;
+    top: 10px;
+    left: 100px;
+}
+
+.container4{
+    margin-top: -10px;
+    padding: 0;
+    width: 50%;
+    height: 300px;
+    position: relative;
+}
+
+#c1{
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width:70%;
+    height:300px;
+}
+#c2{
+    position: absolute;
+    top: 80%;
+    left: 10%;
+    width:70%;
+    height:300px;
+}
+
+.container5{
+    width: 100%;
+    height: 600px;
+    position: relative;
+    top: 10px;
+}
+#caja1{
+    background-color: white;
+    position: absolute;
+    height: 400px;
+    width: 300px;
+    top: 100px;
+    left: 150px;
+    border-radius: 5px;
+    -webkit-box-shadow: 5px 5px 15px -4px #000000; 
+    box-shadow: 5px 5px 15px -4px #000000;
+}
+#caja2{
+    background-color: white;
+    position: absolute;
+    height: 400px;
+    width: 300px;
+    top: 100px;
+    left: 550px;
+    border-radius: 5px;
+    -webkit-box-shadow: 5px 5px 15px -4px #000000; 
+    box-shadow: 5px 5px 15px -4px #000000;
+}
+#caja3{
+    background-color: white;
+    position: absolute;
+    height: 400px;
+    width: 300px;
+    top: 100px;
+    left: 950px;
+    border-radius: 5px;
+    -webkit-box-shadow: 5px 5px 15px -4px #000000; 
+    box-shadow: 5px 5px 15px -4px #000000;
+}
+#caja4{
+    background-color: white;
+    position: absolute;
+    height: 400px;
+    width: 300px;
+    top: 100px;
+    left: 1350px;
+    border-radius: 5px;
+    -webkit-box-shadow: 5px 5px 15px -4px #000000; 
+    box-shadow: 5px 5px 15px -4px #000000;
+}
+
+#ch3{
+    font-size: 26px;
+    color: blue;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#cp{
+    font-size: 20px;
+    color:dimgray;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#cim{
+    margin-left: 20px;
+    margin-top: 20px;
+}

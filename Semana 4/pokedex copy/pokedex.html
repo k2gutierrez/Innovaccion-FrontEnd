@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .ba{
+                width: 500px;
+                height: 700px;
+                background-color: red;
+                border-color: black;
+                border-style: solid;
+            }
+            .red1{
+                position: absolute;
+                left: 400px;
+                top: 100px;
+            }
+            .red2{
+                position: absolute;
+                right: 450px;
+                top: 100px;
+            }
+            .circ{
+                border-radius: 50%;
+                background-color: black;
+                width: 100px;
+                height: 100px;
+            }
+            .c1{
+                position: absolute;
+                height: 110px;
+                width: 110px;
+                background-color: white;
+                top: 120px;
+                left: 420px;
+            }
+            .c2{
+                position: absolute;
+                height: 90px;
+                width: 90px;
+                background-color:rgb(52, 52, 146);
+                top: 125px;
+                left: 432px;
+            }
+            .c3{
+                position: absolute;
+                height: 70px;
+                width: 70px;
+                background-color:aqua;
+                top: 125px;
+                left: 438px;
+            }
+            .c4{
+                position: absolute;
+                height: 20px;
+                width: 20px;
+                background-color:white;
+                top: 135px;
+                left: 460px;
+            }
+            .sq1{
+                position: absolute;
+                top: 300px;
+                left: 480px;
+                width: 350px;
+                height: 300px;
+                background-color: grey;
+                border-radius: 5px;
+                border-bottom-left-radius: 100px;
+            }
+            .sq2{
+                width: 235px;
+                height: 235px;
+                position: absolute;
+                top: 332px;
+                left: 540px;
+                background-color: white;
+            }
+            #pokeImg{
+                position: absolute;
+                top: 3%;
+                left: 3%;
+            }
+            .sq3{
+                position: absolute;
+                top: 63%;
+                left: 530px;
+                width: 275px;
+                height: 33px;
+            }
+            #pokeName{
+                position: absolute;
+                top: 2%;
+                font-size: 20px;
+            }
+            #ti{
+                position: absolute;
+                left: 620px;
+                top: 10%;
+                font-size: 40px;  
+            }
+            #but{
+                position: absolute;
+                top: 70%;
+                left: 30%;
+                font-size: 26px;
+                border-radius: 5px;
+                background-color: green;
+            }
+            .blu{
+                position: absolute;
+                top: 15%;
+                left: 15%;
+                width: 354px;
+                height: 450px;
+                background-color: aqua;
+            }
+            .fo{
+                font-size: 36px;
+                margin-top: 8px;
+                margin-left: 8px;
+            }
+        </style>
+        <title>Pokedex</title>
+    </head>
+    <body>
+
+        <section class="container">
+            <div class="red1 ba"></div>
+            <div class="red2 ba">
+                <div class="blu">
+                    <div id="hp" name="hp" class="fo"></div>
+                    <div id="atk" name="atk" class="fo"></div>
+                    <div id="def" name="def" class="fo"></div>
+                    <div id="satk" name="satk" class="fo"></div>
+                    <div id="sdef" name="sdef" class="fo"></div>
+                    <div id="spd" name="spd" class="fo"></div>
+                    <div id="type" name="type" class="fo"></div>
+                    <div id="ab1" name="ab1" class="fo"></div>
+                    <div id="ab2" name="ab2" class="fo"></div>
+                </div>
+            </div>
+            <div class="c1 circ"></div>
+            <div class="c2 circ"></div>
+            <div class="c3 circ"></div>
+            <div class="c4 circ"></div>
+            <div class="sq1"></div>
+            <div class="sq2">
+                <img src="./assets/pokeball.png" alt="Pokemon" id="pokeImg" width="220 px"><br>
+            </div>
+            <div class="sq3">
+                <input type="text" placeholder="pikachu" id="pokeName" name="pokename">
+            </div>
+            <h1 id="ti">Pokedex</h1>
+            <button onclick="fetchPokemon()" id="but">Cambiar pokemon</button>
+        </section>
+        
+    </body>
+    <footer>
+        <script>
+            const fetchPokemon = () => {
+                const pokeName = document.getElementById("pokeName");
+                let pokeInput = pokeName.value.toLowerCase();
+                const url = `https://pokeapi.co/api/v2/pokemon/${pokeInput}`;
+                fetch(url).then((res) => {
+                    if(res.status != "200"){
+                        console.log(res);
+                        pokeImage("./assets/pokesad.jpeg");
+                    }
+                    else{
+                        return res.json();
+                    }
+                    //console.log(res);
+                }).then((data) => {
+                    //console.log(data);
+                    let pokeImg = data.sprites.front_default;
+                    let hp = data.stats[0].base_stat;
+                    let atk = data.stats[1].base_stat;
+                    let def = data.stats[2].base_stat;
+                    let satk = data.stats[3].base_stat;
+                    let sdef = data.stats[4].base_stat;
+                    let spd = data.stats[5].base_stat;
+                    let type = data.types[0].type.name;
+                    let ab1 = data.abilities[0].ability.name;
+                    let ab2 = data.abilities[1].ability.name;
+                    //console.log(type);
+                    pokeImage(pokeImg);
+                    pokeHp(hp);
+                    pokeAtk(atk);
+                    pokeDef(def);
+                    pokeSatk(satk);
+                    pokeSdef(sdef);
+                    pokeSpd(spd);
+                    pokeType(type);
+                    pokeab1(ab1);
+                    pokeab2(ab2);
+                })
+            }
+
+            const pokeImage = (url) => {
+                const pokeImg = document.getElementById("pokeImg");
+                pokeImg.src = url;   
+            }
+            const pokeHp = (val) => {
+                php = document.getElementById("hp").innerHTML = "HP: "+val;
+            }
+            const pokeAtk = (val1) => {
+                php = document.getElementById("atk").innerHTML = "Atk: "+val1;
+            }
+            const pokeDef = (val2) => {
+                php = document.getElementById("def").innerHTML = "Def: "+val2;
+            }
+            const pokeSatk = (val3) => {
+                php = document.getElementById("satk").innerHTML = "S.Atk: "+val3;
+            }
+            const pokeSdef = (val4) => {
+                php = document.getElementById("sdef").innerHTML = "S.Def: "+val4;
+            }
+            const pokeSpd = (val5) => {
+                php = document.getElementById("spd").innerHTML = "Spd: "+val5;
+            }
+            const pokeType = (val6) => {
+                php = document.getElementById("type").innerHTML = "Type: "+val6;
+            }
+            const pokeab1 = (val7) => {
+                php = document.getElementById("ab1").innerHTML = "Ability 1: "+val7;
+            }
+            const pokeab2 = (val8) => {
+                php = document.getElementById("ab2").innerHTML = "Ability 2: "+val8;
+            }
+        </script>
+    </footer>
+</html>
